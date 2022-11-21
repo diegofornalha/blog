@@ -473,12 +473,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Hexo/">
+                                <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/">
+                                <span class="chip bg-color">网站开发</span>
+                            </a>
+                        
+                            <a href="/tags/Azure/">
+                                <span class="chip bg-color">Azure</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/" class="post-category">
+                                网站开发
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -501,14 +522,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    511
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -531,7 +552,59 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="将github上的Hexo网站托管到AzureWeb平台"><a href="#将github上的Hexo网站托管到AzureWeb平台" class="headerlink" title="将github上的Hexo网站托管到AzureWeb平台"></a>将github上的Hexo网站托管到AzureWeb平台</h2><h3 id="一、注册Azure学生免费账号"><a href="#一、注册Azure学生免费账号" class="headerlink" title="一、注册Azure学生免费账号"></a>一、注册Azure学生免费账号</h3><p>打开 imagine Cup 官网，官网为<a target="_blank" rel="noopener" href="https://imaginecup.microsoft.com/zh-cn">学生开发人员工具，资源和体验 | Imagine Cup (microsoft.com)</a></p>
+<p>浏览此页面的最下方，访问：面向学生的 Azure。</p>
+<p>注册的时候地址不要选大陆地区，可以选择中国香港。</p>
+<p>Azure网站为<a target="_blank" rel="noopener" href="https://portal.azure.com/?Microsoft_Azure_Education_correlationId=06390a2c5ce9461296e1bac74409dc38&Microsoft_Azure_Education_newA4E=true&Microsoft_Azure_Education_asoSubGuid=beb6fcfc-8d93-417f-9732-df291f0071a1#home">主页 - Microsoft Azure</a></p>
+<h3 id="二、创建静态-Web-应用"><a href="#二、创建静态-Web-应用" class="headerlink" title="二、创建静态 Web 应用"></a>二、创建静态 Web 应用</h3><p>点击创建，托管计划选择免费，部署详细信息选择其他。<br>如果直接选择 Github，然后选择对应的仓库，Azure 会自动在仓库里设置 Github Actions，为了演示选择其他，在创建后手动配置。<br><img src="/../../images/11-%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/%E5%B0%86github%E4%B8%8A%E7%9A%84Hexo%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1%E5%88%B0AzureWeb%E5%B9%B3%E5%8F%B0-1.png"></p>
+<p>选择管理部署令牌，是一个序列号，需要复制一下，等会拷贝到github仓库中。<br><img src="/../../images/11-%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/%E5%B0%86github%E4%B8%8A%E7%9A%84Hexo%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1%E5%88%B0AzureWeb%E5%B9%B3%E5%8F%B0-2.png"></p>
+<h3 id="三、创建github项目"><a href="#三、创建github项目" class="headerlink" title="三、创建github项目"></a>三、创建github项目</h3><p>在github中正常创建新项目，并且创建main分支。</p>
+<p>进入创建的github仓库，依次选择Settings &#x3D;&gt; Security &#x3D;&gt; Secrets &#x3D;&gt; Actions。</p>
+<p>新建一个 Secret，名称 AZURE_STATIC_WEB_APPS_API_TOKEN，将第二步中复制的部署令牌粘贴进去。<br><img src="/../../images/11-%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/%E5%B0%86github%E4%B8%8A%E7%9A%84Hexo%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1%E5%88%B0AzureWeb%E5%B9%B3%E5%8F%B0-3.png"></p>
+<h3 id="四、在Hexo项目中创建-github-action-文件"><a href="#四、在Hexo项目中创建-github-action-文件" class="headerlink" title="四、在Hexo项目中创建 github action 文件"></a>四、在Hexo项目中创建 github action 文件</h3><p>在Hexo项目根目录下创建 <code>.github/workflows</code>目录，然后创建 <code>github action</code> 文件: <code>static-web-app.yml</code>。</p>
+<p>路径如下图所示。</p>
+<p><img src="/../../images/11-%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/%E5%B0%86github%E4%B8%8A%E7%9A%84Hexo%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1%E5%88%B0AzureWeb%E5%B9%B3%E5%8F%B0-4.png"></p>
+<p><code>github action</code> 文件内容如下：</p>
+<pre class="language-yml" data-language="yml"><code class="language-yml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Azure Static Web Apps CI/CD
+
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> main
+
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">build_and_deploy_job</span><span class="token punctuation">:</span>
+    <span class="token key atrule">if</span><span class="token punctuation">:</span> github.event_name == 'push'
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> Build and Deploy Job
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">submodules</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Build And Deploy
+        <span class="token key atrule">id</span><span class="token punctuation">:</span> builddeploy
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> Azure/static<span class="token punctuation">-</span>web<span class="token punctuation">-</span>apps<span class="token punctuation">-</span>deploy@v1
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">azure_static_web_apps_api_token</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.AZURE_STATIC_WEB_APPS_API_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+          <span class="token key atrule">repo_token</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GITHUB_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> <span class="token comment"># Used for GitHub integrations (i.e. PR comments)</span>
+          <span class="token key atrule">action</span><span class="token punctuation">:</span> <span class="token string">'upload'</span>
+          <span class="token key atrule">app_location</span><span class="token punctuation">:</span> <span class="token string">'/'</span>
+          <span class="token key atrule">output_location</span><span class="token punctuation">:</span> <span class="token string">'public'</span>
+          <span class="token key atrule">app_build_command</span><span class="token punctuation">:</span> <span class="token string">'npm run deploy'</span>
+</code></pre>
+
+<p>将github仓库的链接配置在<code>_config.yml</code>文件中，如下：</p>
+<pre class="language-yml" data-language="yml"><code class="language-yml"><span class="token comment"># 上传到Azure平台</span>
+<span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
+  <span class="token key atrule">repo</span><span class="token punctuation">:</span> git@github.com<span class="token punctuation">:</span>bitbci/BrainCareAzureWeb.git
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> main</code></pre>
+
+<p>正常使用<code>hexo d</code>指令上传项目即可。</p>
+<h3 id="五、自定义域名"><a href="#五、自定义域名" class="headerlink" title="五、自定义域名"></a>五、自定义域名</h3><p>进行到这一步，已经可以正常查看网页了。<br>Azure有一个分配的域名，如下。</p>
+<p><img src="/../../images/11-%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/%E5%B0%86github%E4%B8%8A%E7%9A%84Hexo%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1%E5%88%B0AzureWeb%E5%B9%B3%E5%8F%B0-5.png"></p>
+<p>如果不想用分配的域名，也可以在阿里云等平台购买域名，在Azure里面配置即可。</p>
+
                 
             </div>
             <hr/>
@@ -594,7 +667,19 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Hexo/">
+                                    <span class="chip bg-color">Hexo</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/">
+                                    <span class="chip bg-color">网站开发</span>
+                                </a>
+                            
+                                <a href="/tags/Azure/">
+                                    <span class="chip bg-color">Azure</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -662,13 +747,33 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            BITBCI
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/" class="post-category">
+                                    网站开发
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">网站开发</span>
+                    </a>
+                    
+                    <a href="/tags/Azure/">
+                        <span class="chip bg-color">Azure</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -904,7 +1009,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">37.1k</span>&nbsp;字
+                class="white-color">37.6k</span>&nbsp;字
             
             
             
