@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>将github上的Hexo网站托管到Azure平台</title>
+      <title>将github上的Hexo网站托管到AzureWeb平台</title>
       <link href="/2022/11/21/11-wang-zhan-kai-fa/jiang-github-shang-de-hexo-wang-zhan-tuo-guan-dao-azure-ping-tai/"/>
       <url>/2022/11/21/11-wang-zhan-kai-fa/jiang-github-shang-de-hexo-wang-zhan-tuo-guan-dao-azure-ping-tai/</url>
       
@@ -33,9 +33,9 @@
       
         <tags>
             
-            <tag> 驱动安装 </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> 驱动安装 </tag>
             
         </tags>
       
@@ -60,9 +60,9 @@
       
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> 桌面快捷方式 </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
       
@@ -929,33 +929,6 @@
     
     
     <entry>
-      <title>使用sphinx自动生成Python项目文档</title>
-      <link href="/2022/05/06/4-python-kai-fa/shi-yong-sphinx-zi-dong-sheng-cheng-python-xiang-mu-wen-dang/"/>
-      <url>/2022/05/06/4-python-kai-fa/shi-yong-sphinx-zi-dong-sheng-cheng-python-xiang-mu-wen-dang/</url>
-      
-        <content type="html"><![CDATA[<h2 id="使用sphinx自动Python项目文档"><a href="#使用sphinx自动Python项目文档" class="headerlink" title="使用sphinx自动Python项目文档"></a>使用sphinx自动Python项目文档</h2><h3 id="一、sphinx简介"><a href="#一、sphinx简介" class="headerlink" title="一、sphinx简介"></a>一、sphinx简介</h3><p>Sphinx能够轻易地创建智慧和优雅的文档，出自Georg Brandl之手，在BSD许可证下授权。<br>它能够把一组 reStructuredText 格式的文件转换成各种输出格式，而且自动地生成交叉引用，生成目录等。<br>也就是说，如果有一个目录，里面包含一堆reST格式的文档（可能子目录里面也同样存在reST格式的文档），<br>Sphinx能够生成一个漂亮的组织结构以及便于浏览和导航的HTML 文件（这些文件在其他的文件夹中）。<br>当然对于同样的来源文件（reST格式），它也能够生成一个能够被编译（生成）PDF版本的LaTeX格式的文件。</p><h3 id="二、rst文件"><a href="#二、rst文件" class="headerlink" title="二、rst文件"></a>二、rst文件</h3><p>rst(ReStructuredText) 是一种用于文本数据的文件格式，主要作为 Python 编程语言技术文档的描述语言。<br>其旨在为 Python 创建一组类似于 Java 的 Javadoc的功能说明文档；<br>Docutils 可以从从 Python 程序中提取注释和信息，并将它们格式化为各种形式的程序文档，rst就是其中的一种。</p><p>rst一般组织在python源文件的doc&#x2F;docs目录下，可以通过sphinx工具将rst文件转化为html文件易于阅读。<br>sphinx可以通过pip进行安装，可执行文件在python安装目录下的Scripts。<br>安装过Anaconda的sphinx已经安装，可以直接打开Anaconda的命令行执行。</p><h3 id="三、安装sphinx-Window"><a href="#三、安装sphinx-Window" class="headerlink" title="三、安装sphinx(Window)"></a>三、安装sphinx(Window)</h3><pre class="language-terminal" data-language="terminal"><code class="language-terminal">pip install sphinxpip install sphinx_rtd_them</code></pre><h3 id="四、生成文档"><a href="#四、生成文档" class="headerlink" title="四、生成文档"></a>四、生成文档</h3><pre class="language-terminal" data-language="terminal"><code class="language-terminal">sphinx-build -b html docs build# 进入源文件目录（docs的上级目录），docs是rst所在的文件夹# build是输出html的目录</code></pre><h3 id="五、使用make-bat批处理文件"><a href="#五、使用make-bat批处理文件" class="headerlink" title="五、使用make.bat批处理文件"></a>五、使用make.bat批处理文件</h3><h4 id="1、配置conf-py文件"><a href="#1、配置conf-py文件" class="headerlink" title="1、配置conf.py文件"></a>1、配置conf.py文件</h4><p>主要修改的参数如下：</p><pre class="language-terminal" data-language="terminal"><code class="language-terminal">sys.path.append(os.path.relpath(&#39;..&#39;))# 此处采用的是相对路径，就是项目相对于doc的位置</code></pre><h4 id="2、执行-make-bat-html"><a href="#2、执行-make-bat-html" class="headerlink" title="2、执行 .\make.bat html"></a>2、执行 .\make.bat html</h4><pre class="language-terminal" data-language="terminal"><code class="language-terminal">.\make.bat html</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Python开发 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Python开发 </tag>
-            
-            <tag> sphinx </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>傅里叶变换的本质与Python代码实现</title>
       <link href="/2022/05/06/4-python-kai-fa/fu-li-xie-bian-huan-de-ben-zhi-yu-python-dai-ma-shi-xian/"/>
       <url>/2022/05/06/4-python-kai-fa/fu-li-xie-bian-huan-de-ben-zhi-yu-python-dai-ma-shi-xian/</url>
@@ -975,6 +948,33 @@
             <tag> Python开发 </tag>
             
             <tag> 傅里叶变换 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用sphinx自动生成Python项目文档</title>
+      <link href="/2022/05/06/4-python-kai-fa/shi-yong-sphinx-zi-dong-sheng-cheng-python-xiang-mu-wen-dang/"/>
+      <url>/2022/05/06/4-python-kai-fa/shi-yong-sphinx-zi-dong-sheng-cheng-python-xiang-mu-wen-dang/</url>
+      
+        <content type="html"><![CDATA[<h2 id="使用sphinx自动Python项目文档"><a href="#使用sphinx自动Python项目文档" class="headerlink" title="使用sphinx自动Python项目文档"></a>使用sphinx自动Python项目文档</h2><h3 id="一、sphinx简介"><a href="#一、sphinx简介" class="headerlink" title="一、sphinx简介"></a>一、sphinx简介</h3><p>Sphinx能够轻易地创建智慧和优雅的文档，出自Georg Brandl之手，在BSD许可证下授权。<br>它能够把一组 reStructuredText 格式的文件转换成各种输出格式，而且自动地生成交叉引用，生成目录等。<br>也就是说，如果有一个目录，里面包含一堆reST格式的文档（可能子目录里面也同样存在reST格式的文档），<br>Sphinx能够生成一个漂亮的组织结构以及便于浏览和导航的HTML 文件（这些文件在其他的文件夹中）。<br>当然对于同样的来源文件（reST格式），它也能够生成一个能够被编译（生成）PDF版本的LaTeX格式的文件。</p><h3 id="二、rst文件"><a href="#二、rst文件" class="headerlink" title="二、rst文件"></a>二、rst文件</h3><p>rst(ReStructuredText) 是一种用于文本数据的文件格式，主要作为 Python 编程语言技术文档的描述语言。<br>其旨在为 Python 创建一组类似于 Java 的 Javadoc的功能说明文档；<br>Docutils 可以从从 Python 程序中提取注释和信息，并将它们格式化为各种形式的程序文档，rst就是其中的一种。</p><p>rst一般组织在python源文件的doc&#x2F;docs目录下，可以通过sphinx工具将rst文件转化为html文件易于阅读。<br>sphinx可以通过pip进行安装，可执行文件在python安装目录下的Scripts。<br>安装过Anaconda的sphinx已经安装，可以直接打开Anaconda的命令行执行。</p><h3 id="三、安装sphinx-Window"><a href="#三、安装sphinx-Window" class="headerlink" title="三、安装sphinx(Window)"></a>三、安装sphinx(Window)</h3><pre class="language-terminal" data-language="terminal"><code class="language-terminal">pip install sphinxpip install sphinx_rtd_them</code></pre><h3 id="四、生成文档"><a href="#四、生成文档" class="headerlink" title="四、生成文档"></a>四、生成文档</h3><pre class="language-terminal" data-language="terminal"><code class="language-terminal">sphinx-build -b html docs build# 进入源文件目录（docs的上级目录），docs是rst所在的文件夹# build是输出html的目录</code></pre><h3 id="五、使用make-bat批处理文件"><a href="#五、使用make-bat批处理文件" class="headerlink" title="五、使用make.bat批处理文件"></a>五、使用make.bat批处理文件</h3><h4 id="1、配置conf-py文件"><a href="#1、配置conf-py文件" class="headerlink" title="1、配置conf.py文件"></a>1、配置conf.py文件</h4><p>主要修改的参数如下：</p><pre class="language-terminal" data-language="terminal"><code class="language-terminal">sys.path.append(os.path.relpath(&#39;..&#39;))# 此处采用的是相对路径，就是项目相对于doc的位置</code></pre><h4 id="2、执行-make-bat-html"><a href="#2、执行-make-bat-html" class="headerlink" title="2、执行 .\make.bat html"></a>2、执行 .\make.bat html</h4><pre class="language-terminal" data-language="terminal"><code class="language-terminal">.\make.bat html</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python开发 </tag>
+            
+            <tag> sphinx </tag>
             
         </tags>
       
@@ -1111,9 +1111,9 @@
       
         <tags>
             
-            <tag> 办公技巧 </tag>
-            
             <tag> Win11 </tag>
+            
+            <tag> 办公技巧 </tag>
             
         </tags>
       
@@ -1329,11 +1329,11 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——运动想象有训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/</url>
+      <title>2019年脑机接口大赛——运动想象无训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-wu-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-wu-xun-lian-shu-ju-ji/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>运动想象是一种自发可控的脑电行为，是更加自然、更加实用的人机接口方式，使用者仅仅通过“想象”即可实现控制。近些年，基于运动想象的脑机接口已经在医疗康复、军事、娱乐等方面发挥重要作用。本赛题希望通过更高的识别性能以帮助运动想象脑-机接口获得更为广泛的运用。<br>本赛题基于多类运动想象脑机接口的EEG数据，测试不同算法在有限训练数据条件下对运动想象脑电模式的识别性能，并根据多名受试者测试数据中的信息传输率（Information transfer rate，ITR）确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>本实验原始EEG数据由博睿康64导联设备采集（仅包含59个导联的脑电数据，60-64导联无效），采样率为1000Hz，数据统一进行50Hz陷波处理。一次完整实验为一个record，一名被试分3天完成多个record；实验数据以record为单位，每个record中均为连续采集EEG数据。每个record包含2个block（睁眼1min、闭眼1min）和5个session，session与session之间不少于1.5分钟的休息时间；每个session包括20*N个trial（每类运动想象任务20个trial，N：运动想象任务类别数，如N为2表示任务为左手运动想象和右手运动想象两类，如N为3表示任务为左手运动想象、右手运动想象、双脚运动想象三类），每个record过程如图1所示。 每个trial包含1.5s提示、4s运动想象任务、2s休息，事件标签开始于0时刻，如图2所示。以上不同任务相对应的标签信息如表1所示。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png" alt="单个trial运动想象流程图"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>同步有训练集运动想象赛题，提供训练集（每个被试的训练数据包含2个block{睁眼1min、闭眼1min}和3个运动想象任务session），训练集数据标识了事件时刻、事件类型等建模关键信息。<br>每个被试的测试数据和训练数据来自同一个record，通过被试ID与训练数据对应。每个被试对应两组测试数据，每组测试数据包含20*N个trial（三类每组60个，两类每组40个）。测试数据经数据模型封装后，由参赛者通过赛题框架接口调取。</p><p>BXXOOT 、BXXOOE 、TXXOOT 、TXXOOE, XX对应人员编号，OO对应数据编号，数据集按照题库中人员和数据编号统一命名，最终的取值，由专家组抽签得到。以上B0101T等仅做示范，比赛中可能出现B0801T等其他数据，参赛队员根据赛题给出的训练集对应建立模型即可。<br>B开头数据为二类数据，T开头数据为三类数据。B0101E.mat 等删除线数据集，比赛时通过系统获得。数据集由专家组抽签选取，部分数据（包括测试数据）将公开用于本地测试。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-5.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr">https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr</a><br>提取码：6qsr<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>运动想象是一种自发可控的脑电行为，是更加自然、更加实用的人机接口方式，使用者仅仅通过“想象”即可实现控制。然而运动想象在不同受试者之间的表现差异很大，如何减少训练的工作量，减少系统的校准时间，建立更为可靠通用的模型，依旧是该领域的重点和难点。本赛题希望通过减少训练时间以帮助运动想象脑-机接口获得更为广泛的运用。<br>本赛题基于两类运动想象脑机接口的EEG数据，测试算法在无训练数据条件下对运动想象脑电模式的识别性能, 并根据多名受试者测试数据的目标识别准确率确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>本实验原始EEG数据由博睿康64导联设备采集（仅包含59个导联的脑电数据，60-64导联无效），采样率为1000Hz，数据已统一进行50Hz陷波处理。一次完整实验为一个record，一名被试分3天完成多个record；实验数据以record为单位，每个record中均为连续采集EEG数据。每个record包含2个block（睁眼1min、闭眼1min）和5个session，session与session之间不少于1.5分钟的休息时间；每个session包括20*N个trial（每类运动想象任务20个trial，N：运动想象任务类别数，如N为2表示任务为左手运动想象和右手运动想象两类，如N为3表示任务为左手运动想象、右手运动想象、双脚运动想象三类），每个record过程如图1所示。 每个trial包含1.5s提示、4s运动想象任务、2s休息，事件标签开始于0时刻，如图2所示。以上不同任务相对应的标签信息如表1所示。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png" alt="图1  record过程"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png" alt="图2 单个trial运动想象流程图"></p><ul><li>表1 标签信息<table><thead><tr><th>标签</th><th>7</th><th>8</th><th>1</th><th>2</th><th>9</th></tr></thead><tbody><tr><td>含义</td><td>睁眼</td><td>闭眼</td><td>左手运动想象</td><td>右手运动想象</td><td>休息</td></tr></tbody></table></li></ul><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>EEG数据经数据模型封装后，由参赛者通过框架接口调取。同步无训练集运动想象赛题，一次getdata()获取一个测试集数据（如包含40个trial的数据），参赛选手每次对当前测试集数据进行识别，一次性report()当前测试集所有标签。之后getData()调取下一个测试集，直到检测到结束标志为止，最终系统根据评分准则综合评分。</p><p>BXXOOE, XX对应人员编号，OO对应数据编号，数据集按照题库中人员和数据编号统一命名，最终的取值，由组委会抽签得到。以上B0701E等仅做示范，比赛中可能出现B1201E等其他数据。以上数据集比赛时通过系统框架接口获得。部分数据将开放下载，以供本地调试。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-5.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1lR5oHOED2y4gp1-ia49yKw?pwd=p3t7">https://pan.baidu.com/s/1lR5oHOED2y4gp1-ia49yKw?pwd=p3t7</a><br>提取码：p3t7<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -1350,11 +1350,32 @@
     
     
     <entry>
-      <title>2019年脑机接口大赛——运动想象无训练数据集</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-wu-xun-lian-shu-ju-ji/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-wu-xun-lian-shu-ju-ji/</url>
+      <title>MI-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
       
-        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>运动想象是一种自发可控的脑电行为，是更加自然、更加实用的人机接口方式，使用者仅仅通过“想象”即可实现控制。然而运动想象在不同受试者之间的表现差异很大，如何减少训练的工作量，减少系统的校准时间，建立更为可靠通用的模型，依旧是该领域的重点和难点。本赛题希望通过减少训练时间以帮助运动想象脑-机接口获得更为广泛的运用。<br>本赛题基于两类运动想象脑机接口的EEG数据，测试算法在无训练数据条件下对运动想象脑电模式的识别性能, 并根据多名受试者测试数据的目标识别准确率确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>本实验原始EEG数据由博睿康64导联设备采集（仅包含59个导联的脑电数据，60-64导联无效），采样率为1000Hz，数据已统一进行50Hz陷波处理。一次完整实验为一个record，一名被试分3天完成多个record；实验数据以record为单位，每个record中均为连续采集EEG数据。每个record包含2个block（睁眼1min、闭眼1min）和5个session，session与session之间不少于1.5分钟的休息时间；每个session包括20*N个trial（每类运动想象任务20个trial，N：运动想象任务类别数，如N为2表示任务为左手运动想象和右手运动想象两类，如N为3表示任务为左手运动想象、右手运动想象、双脚运动想象三类），每个record过程如图1所示。 每个trial包含1.5s提示、4s运动想象任务、2s休息，事件标签开始于0时刻，如图2所示。以上不同任务相对应的标签信息如表1所示。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png" alt="图1  record过程"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png" alt="图2 单个trial运动想象流程图"></p><ul><li>表1 标签信息<table><thead><tr><th>标签</th><th>7</th><th>8</th><th>1</th><th>2</th><th>9</th></tr></thead><tbody><tr><td>含义</td><td>睁眼</td><td>闭眼</td><td>左手运动想象</td><td>右手运动想象</td><td>休息</td></tr></tbody></table></li></ul><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>EEG数据经数据模型封装后，由参赛者通过框架接口调取。同步无训练集运动想象赛题，一次getdata()获取一个测试集数据（如包含40个trial的数据），参赛选手每次对当前测试集数据进行识别，一次性report()当前测试集所有标签。之后getData()调取下一个测试集，直到检测到结束标志为止，最终系统根据评分准则综合评分。</p><p>BXXOOE, XX对应人员编号，OO对应数据编号，数据集按照题库中人员和数据编号统一命名，最终的取值，由组委会抽签得到。以上B0701E等仅做示范，比赛中可能出现B1201E等其他数据。以上数据集比赛时通过系统框架接口获得。部分数据将开放下载，以供本地调试。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-5.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1lR5oHOED2y4gp1-ia49yKw?pwd=p3t7">https://pan.baidu.com/s/1lR5oHOED2y4gp1-ia49yKw?pwd=p3t7</a><br>提取码：p3t7<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于运动想象的BCI（Motor Imagery BCI, MI-BCI）是BCI的主要范式之一，通过检测识别用户MI产生的EEG来判断用户意图，进而实现人脑与外部设备之间的直接通信与控制。用户在运动想象的过程中，大脑皮层会产生两种变化明显的节律信号，分别是8-15Hz的Mu节律信号和 18-24Hz 的Beta节律信号。同时，大脑皮层对侧运动感觉区的脑电节律能量会明显降低，而同侧运动感觉区的脑电节律能量增大，这种现象称为事件相关去同步（Event Related Desynchronization，ERD）&#x2F;事件相关同步（Event Related Synchronization，ERS）。<br>并且不同部位的躯体运动想象与该躯体对应的感觉运动皮层 ERD&#x2F;ERS 现象有关，即 ERD&#x2F;ERS 现象有空间分布的特性。正是因为运动想象脑电信号空间分布的特性，构成了解码运动想象思维信号的生理基础，采用合适的特征提取算法就可以较好地识别患者的运动意图。<br>下图展示了对某位被试运动想象产生的脑电信号，选择 8-15Hz 和 18-24Hz 的频带范围作为 ERD&#x2F;ERS 特定频带，分别计算出的 C3、C4 通道脑电数据的左手和右手的想象能量。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>下图展示了某位受试在进行运动想象时，用32导电极帽采集的各通道的部分脑电数据。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-4.png"><br>典型算法</p><p>PSD（功率谱估计）<br>功率谱估计是脑电信号频域分析的典型方法之一，把幅度随时间变化的脑电信号变换为脑电功率随频率变化的谱图，从而可以直观地观察到脑电节律的分布与变化情况。经典功率谱估计是在较长的数据中截取一段有限长的数据做分析，根据截取的样本估计出整体的功率谱。基本思想就是把一长度为N的数据分成L段，每段M个数据，分段数据先于窗函数W(n)相乘，分别计算出每一段的功率谱，最后叠加求取平均值作为最终功率谱估计。<br>算法过程：使用Cz、C3和C4这3个导联的数据，通过Cz消除C3、C4的相关性，以8-15Hz频段C3、C4导联的功率谱差值作为特征向量，并结合LDA进行分类。<br>用Welch功率谱密度估计法对C3和C4的EEG数据进行平均功率谱分析，分别得到进行左手MI的EEG平均功率谱和进行右手MI的EEG平均功率谱。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-5.png"></p><p>参考文献<br>Herman P, Prasad G, Mcginnity T M, et al. Comparative Analysis of Spectral Approaches to Feature Extraction for EEG-Based Motor Imagery Classification[J]. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2008, 16(4):317-326.</p><p>LDA<br>LDA的目标是训练一个超平面，然后依据选定的类来划分信息，一般是选定两类来进行分类。基本原理如下图所示。向量组取决于超平面的交叉，方向由向量组确定。通过寻找预测两类源的最优值以及减小类内的修正就可以找到超平面。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-6.png"><br>其中，假设是维特征向量，，相应的基向量为，则线性判别函数的一般形式为：</p><p>其中，是权向量（也称投影矩阵），是阈值，是分类器的输出。</p><p>参考文献<br>Keirn Z A, Aunon J I. A new mode of communication between man and his surroundings[J]. IEEE Transactions on Biomedical Engineering, 1990, 37(12):1209-1214.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开源数据集 </category>
+          
+          <category> 脑机接口 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2019年脑机接口大赛——运动想象有训练数据集</title>
+      <link href="/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/"/>
+      <url>/2022/04/20/kai-yuan-shu-ju-ji/2019-nian-nao-ji-jie-kou-da-sai-yun-dong-xiang-xiang-you-xun-lian-shu-ju-ji/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><p>2019世界机器人大赛—BCI脑控机器人大赛 暨 第三届中国脑机接口大赛</p><h2 id="赛题背景"><a href="#赛题背景" class="headerlink" title="赛题背景"></a>赛题背景</h2><p>运动想象是一种自发可控的脑电行为，是更加自然、更加实用的人机接口方式，使用者仅仅通过“想象”即可实现控制。近些年，基于运动想象的脑机接口已经在医疗康复、军事、娱乐等方面发挥重要作用。本赛题希望通过更高的识别性能以帮助运动想象脑-机接口获得更为广泛的运用。<br>本赛题基于多类运动想象脑机接口的EEG数据，测试不同算法在有限训练数据条件下对运动想象脑电模式的识别性能，并根据多名受试者测试数据中的信息传输率（Information transfer rate，ITR）确定比赛成绩。</p><h2 id="实验范式"><a href="#实验范式" class="headerlink" title="实验范式"></a>实验范式</h2><p>本实验原始EEG数据由博睿康64导联设备采集（仅包含59个导联的脑电数据，60-64导联无效），采样率为1000Hz，数据统一进行50Hz陷波处理。一次完整实验为一个record，一名被试分3天完成多个record；实验数据以record为单位，每个record中均为连续采集EEG数据。每个record包含2个block（睁眼1min、闭眼1min）和5个session，session与session之间不少于1.5分钟的休息时间；每个session包括20*N个trial（每类运动想象任务20个trial，N：运动想象任务类别数，如N为2表示任务为左手运动想象和右手运动想象两类，如N为3表示任务为左手运动想象、右手运动想象、双脚运动想象三类），每个record过程如图1所示。 每个trial包含1.5s提示、4s运动想象任务、2s休息，事件标签开始于0时刻，如图2所示。以上不同任务相对应的标签信息如表1所示。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-1.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-3.png" alt="单个trial运动想象流程图"></p><h2 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h2><p>同步有训练集运动想象赛题，提供训练集（每个被试的训练数据包含2个block{睁眼1min、闭眼1min}和3个运动想象任务session），训练集数据标识了事件时刻、事件类型等建模关键信息。<br>每个被试的测试数据和训练数据来自同一个record，通过被试ID与训练数据对应。每个被试对应两组测试数据，每组测试数据包含20*N个trial（三类每组60个，两类每组40个）。测试数据经数据模型封装后，由参赛者通过赛题框架接口调取。</p><p>BXXOOT 、BXXOOE 、TXXOOT 、TXXOOE, XX对应人员编号，OO对应数据编号，数据集按照题库中人员和数据编号统一命名，最终的取值，由专家组抽签得到。以上B0101T等仅做示范，比赛中可能出现B0801T等其他数据，参赛队员根据赛题给出的训练集对应建立模型即可。<br>B开头数据为二类数据，T开头数据为三类数据。B0101E.mat 等删除线数据集，比赛时通过系统获得。数据集由专家组抽签选取，部分数据（包括测试数据）将公开用于本地测试。</p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-4.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/%E8%BF%90%E5%8A%A8%E6%83%B3%E8%B1%A1%E6%9C%89%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86-5.png"></p><h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>链接：<a href="https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr">https://pan.baidu.com/s/1cLV_MerVbnr66aQ0pyVteg?pwd=6qsr</a><br>提取码：6qsr<br>–来自百度网盘超级会员V4的分享</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
@@ -1397,27 +1418,6 @@
       <url>/2022/04/20/kai-yuan-shu-ju-ji/ssvep-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
       
         <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于稳态视觉诱发电位的BCI系统是目前最常用的头皮脑电BCI系统之一，该系统以稳态视觉诱发电位（Steady-state visual evoked potentials, SSVEP）作为目标信号。SSVEP是一种通过向受试者呈现以一定频率快速闪烁的刺激块，在头皮上记录到的与刺激频率倍频相同的稳态脑电响应。<br>下图展示了给某位受试呈现了以12Hz闪烁的刺激块时受试者脑电的频域和时域特性。在频域中，我们可以清楚地观察到在12,24,36和48Hz，也就是刺激频率的1倍频，2倍频，3倍频和4倍频处有明显的峰值，而在时域上也可以看到稳定的周期响应。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br>SSVEP BCI进行目标识别的原理简单地来说就是检测脑电信号中是否存在某些特定的频率成分。2002年，清华大学团队设计了一个控制光标二维移动的BCI系统，4个闪烁块按照不同频率闪烁，每个闪烁块编码不同的命令（上下左右），当用户希望控制光标向上，只需要注视对应的闪烁块（假设闪烁频率为12Hz），从而诱发对应频率的SSVEP信号，如果系统检测到12Hz的SSVEP响应，则判断用户在注视向上的光标，从而给出反馈。</p><p>几种典型算法</p><p>由于SSVEP具有显著的频域特征，在早年的SSVEP-BCI研究中，多采用基于功率谱方法（PSD）对信号进行检测，以下述参考文献为例，研究者对采集到的脑电数据进行频谱分析，通过提取频域能量峰值所在的频率点来对目标进行识别。但这种方法易受噪声干扰，性能有限，近年来越来越多的研究者将SSVEP的时域信息纳入到了分析中来。<br>参考文献<br>Ming Cheng, Xiaorong Gao, Shangkai Gao, Dingfeng Xu，Design and Implementation of a Brain-Computer Interface with High Transfer Rates. IEEE Transaction on Biomedical Engineering，VOL. 49, NO. 10, p1181－1186, 2002</p><p>CCA（典型相关分析）<br>CCA是一种度量两组信号之间线性相关性的多元统计方法，在SSVEP-BCI中取得了广泛的应用。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>CCA的目标是找到两个线性组合WX和WY，使得原有的多通道信号x1,x2,…,xn和y1,y2,…,yn相关系数最大。在实际应用时，x1,x2,…,xn为多通道的脑电信号，y1,y2,…,yn为参考信号，即刺激频率的倍频对应的正余弦波。对一段待分类的脑电数据来说，可以计算其与多个参考信号的典型相关系数，比较这些典型相关系数的大小，得到最大相关系数的参考信号对应的频率即为刺激频率。<br>参考文献<br>Bin G, Gao X, Yan Z, Hong B, Gao S: An online multi-channel SSVEP-based brain-computer interface using a canonical correlation analysis method. J Neural Eng; 2009 Aug;6(4):046002</p><p>Template-based CCA<br>上面所述的CCA方法采用正余弦信号作为参考信号，并未充分利用脑电本身的信息，于是出现了Template-based CCA 这一方法，它的基本思想和计算流程和传统CCA方法完全一样，差异在于，Template-based CCA 将之前记录的，已知刺激频率的脑电数据的叠平均信号作为模板，来估计空域滤波器，相较于传统CCA，叠平均得到的模板和空域滤波器可以更好的反映受试者的脑电特异性，因此具有更好的性能。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-4.png"><br>参考文献<br>Bin, G., Gao, X., Wang, Y., Li, Y., Hong, B., &amp; Gao, S. (2011). A high-speed BCI based on code modulation VEP. Journal of Neural Engineering, 8(2).</p><p>Filter-bank CCA</p><p>为了有效地利用SSVEP的基频和谐波信息，从而进一步提高识别精度，下述参考文献提出了基于滤波器组的典型相关分析方法（filter-bank CCA）。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/SSVEP-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-5.png"><br>该方法分为三步，首先是进行滤波器组分析，简单地说即是将脑电数据滤波到不同子带；然后是对每一个子带的数据做CCA得到典型相关系数；最后，通过将各个频带数据的典型相关系数进行加权求和，取和不同参考信号得到的加权和的最大值对应的频率为识别目标。<br>参考文献<br>Chen, X., Wang, Y., Gao, S., Jung, T., &amp; Gao, X. (2015). Filter bank canonical correlation analysis for implementing a high-speed SSVEP-based brain–computer interface. Journal of Neural Engineering, 12(4).</p><p>任务相关成分分析（Task-related Component Analysis, TRCA）<br>TRCA的主要思想是寻找一个线性组合，使得原始数据中与事件相关的频率成分在多次试验的可重复性最大，该方法在SSVEP目标识别中取得了很好的效果。<br>TRCA方法的具体实现方法如下。首先假设存在两种源信号：1）任务相关信号s(t); 2)任务无关信号 n(t)。因此，检测到的多通道EEG信号的线性模式可以表述为：<br>, j &#x3D; 1, 2, … , （3-1）<br>其中，j是通道编号，和是将原信号投影到EEG信号的系数。需要解决的问题是如何从观察信号的线性组合中恢复出任务相关信号。的线性组合可以表示为：<br>（3-2）<br>我们可以通过最大化试次之间协方差的方式求解这个问题。假设第h个试次的EEG信号和预测的任务相关成分分别为和，h &#x3D; 1,2, … ,。对应的时间范围是。这里，是每个任务试次的长度。而第和个试次之间的协方差可以被写作：<br>（3-3）<br>各个试次之间可能的组合可以表示为：</p><pre class="language-none"><code class="language-none">（3-4）其中，矩阵可以被写作：（3-5）为了得到有限个解，的方差被限制为：（3-5）因此，我们可以把求解转化成以下问题：（3-7）</code></pre><p>其中，可以通过求解矩阵特征值的方式获得。</p><p>参考文献<br>Nakanishi, M., Wang, Y., Chen, X., Wang, Y., Gao, X., &amp; Jung, T. (2018). Enhancing Detection of SSVEPs for a High-Speed Brain Speller Using Task-Related Component Analysis. IEEE Transactions on Biomedical Engineering, 65(1), 104-112.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开源数据集 </category>
-          
-          <category> 脑机接口 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>MI-BCI-原理和典型算法简介——转自数据科学社区-DataFountain</title>
-      <link href="/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/"/>
-      <url>/2022/04/20/kai-yuan-shu-ju-ji/mi-bci-yuan-li-he-dian-xing-suan-fa-jian-jie-zhuan-zi-shu-ju-ke-xue-she-qu-datafountain/</url>
-      
-        <content type="html"><![CDATA[<p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-1.png"><br>基于运动想象的BCI（Motor Imagery BCI, MI-BCI）是BCI的主要范式之一，通过检测识别用户MI产生的EEG来判断用户意图，进而实现人脑与外部设备之间的直接通信与控制。用户在运动想象的过程中，大脑皮层会产生两种变化明显的节律信号，分别是8-15Hz的Mu节律信号和 18-24Hz 的Beta节律信号。同时，大脑皮层对侧运动感觉区的脑电节律能量会明显降低，而同侧运动感觉区的脑电节律能量增大，这种现象称为事件相关去同步（Event Related Desynchronization，ERD）&#x2F;事件相关同步（Event Related Synchronization，ERS）。<br>并且不同部位的躯体运动想象与该躯体对应的感觉运动皮层 ERD&#x2F;ERS 现象有关，即 ERD&#x2F;ERS 现象有空间分布的特性。正是因为运动想象脑电信号空间分布的特性，构成了解码运动想象思维信号的生理基础，采用合适的特征提取算法就可以较好地识别患者的运动意图。<br>下图展示了对某位被试运动想象产生的脑电信号，选择 8-15Hz 和 18-24Hz 的频带范围作为 ERD&#x2F;ERS 特定频带，分别计算出的 C3、C4 通道脑电数据的左手和右手的想象能量。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-2.png"><br><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-3.png"><br>下图展示了某位受试在进行运动想象时，用32导电极帽采集的各通道的部分脑电数据。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-4.png"><br>典型算法</p><p>PSD（功率谱估计）<br>功率谱估计是脑电信号频域分析的典型方法之一，把幅度随时间变化的脑电信号变换为脑电功率随频率变化的谱图，从而可以直观地观察到脑电节律的分布与变化情况。经典功率谱估计是在较长的数据中截取一段有限长的数据做分析，根据截取的样本估计出整体的功率谱。基本思想就是把一长度为N的数据分成L段，每段M个数据，分段数据先于窗函数W(n)相乘，分别计算出每一段的功率谱，最后叠加求取平均值作为最终功率谱估计。<br>算法过程：使用Cz、C3和C4这3个导联的数据，通过Cz消除C3、C4的相关性，以8-15Hz频段C3、C4导联的功率谱差值作为特征向量，并结合LDA进行分类。<br>用Welch功率谱密度估计法对C3和C4的EEG数据进行平均功率谱分析，分别得到进行左手MI的EEG平均功率谱和进行右手MI的EEG平均功率谱。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-5.png"></p><p>参考文献<br>Herman P, Prasad G, Mcginnity T M, et al. Comparative Analysis of Spectral Approaches to Feature Extraction for EEG-Based Motor Imagery Classification[J]. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2008, 16(4):317-326.</p><p>LDA<br>LDA的目标是训练一个超平面，然后依据选定的类来划分信息，一般是选定两类来进行分类。基本原理如下图所示。向量组取决于超平面的交叉，方向由向量组确定。通过寻找预测两类源的最优值以及减小类内的修正就可以找到超平面。  </p><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/MI-BCI-%E5%8E%9F%E7%90%86%E5%92%8C%E5%85%B8%E5%9E%8B%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B-6.png"><br>其中，假设是维特征向量，，相应的基向量为，则线性判别函数的一般形式为：</p><p>其中，是权向量（也称投影矩阵），是阈值，是分类器的输出。</p><p>参考文献<br>Keirn Z A, Aunon J I. A new mode of communication between man and his surroundings[J]. IEEE Transactions on Biomedical Engineering, 1990, 37(12):1209-1214.</p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>本文章为公益性质，旨在为脑机接口开发人员、研究人员提供数据下载途径，共同促进脑机接口行业的发展。<br>如有侵权，请联系博主。<br>若诉求合理，可删除文章。</p><center><h2><font>如链接失效，可联系博主微信：BCIRobot</font></h2></center><p><img src="/../../images/%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E9%9B%86/BCIRobot%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.png"></p>]]></content>
       
       
       <categories>
