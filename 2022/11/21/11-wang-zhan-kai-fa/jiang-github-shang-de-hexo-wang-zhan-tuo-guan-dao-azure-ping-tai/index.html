@@ -515,14 +515,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-21
+                    2022-11-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    539
+                    627
                 </div>
                 
 
@@ -590,8 +590,7 @@
           <span class="token key atrule">action</span><span class="token punctuation">:</span> <span class="token string">'upload'</span>
           <span class="token key atrule">app_location</span><span class="token punctuation">:</span> <span class="token string">'/'</span>
           <span class="token key atrule">output_location</span><span class="token punctuation">:</span> <span class="token string">'public'</span>
-          <span class="token key atrule">app_build_command</span><span class="token punctuation">:</span> <span class="token string">'npm run deploy'</span>
-</code></pre>
+          <span class="token key atrule">app_build_command</span><span class="token punctuation">:</span> <span class="token string">'npm run deploy'</span></code></pre>
 
 <p>将github仓库的链接配置在<code>_config.yml</code>文件中，如下：</p>
 <pre class="language-yml" data-language="yml"><code class="language-yml"><span class="token comment"># 上传到Azure平台</span>
@@ -604,7 +603,10 @@
 <p>上传之后需要等一段时间，大概半分钟，就可以打开网页看看效果了。</p>
 <h3 id="五、自定义域名"><a href="#五、自定义域名" class="headerlink" title="五、自定义域名"></a>五、自定义域名</h3><p>进行到这一步，已经可以正常查看网页了。<br>Azure有一个分配的域名，如下。</p>
 <p><img src="/../../images/11-%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/%E5%B0%86github%E4%B8%8A%E7%9A%84Hexo%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1%E5%88%B0AzureWeb%E5%B9%B3%E5%8F%B0-5.png"></p>
-<p>如果不想用分配的域名，也可以在阿里云等平台购买域名，在Azure里面配置即可。</p>
+<p>如果不想用分配的域名，也可以在腾讯云等平台购买域名，在Azure里面配置即可。</p>
+<p>以腾讯云为例，域名控制台网址为：<a target="_blank" rel="noopener" href="https://console.dnspod.cn/dns/braincare.top/record">我的域名 - DNSPod-免费智能DNS解析服务商-电信_网通_教育网,智能DNS</a></p>
+<p>Azure配置方法在以下链接的视频中：先配置txt记录，再配置CNAME记录。</p>
+<p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/azure/static-web-apps/custom-domain-external">在 Azure Static Web Apps 中使用外部提供程序设置自定义域 | Microsoft Learn</a></p>
 
                 
             </div>
