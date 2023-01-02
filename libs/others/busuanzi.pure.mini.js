@@ -1,1 +1,120 @@
-var bszCaller,bszTag;!function(){var c,d,e,a=!1,b=[];ready=function(c){return a||"interactive"===document.readyState||"complete"===document.readyState?c.call(document):b.push(function(){return c.call(this)}),this},d=function(){for(var a=0,c=b.length;c>a;a++)b[a].apply(document);b=[]},e=function(){a||(a=!0,d.call(window),document.removeEventListener?document.removeEventListener("DOMContentLoaded",e,!1):document.attachEvent&&(document.detachEvent("onreadystatechange",e),window==window.top&&(clearInterval(c),c=null)))},document.addEventListener?document.addEventListener("DOMContentLoaded",e,!1):document.attachEvent&&(document.attachEvent("onreadystatechange",function(){/loaded|complete/.test(document.readyState)&&e()}),window==window.top&&(c=setInterval(function(){try{a||document.documentElement.doScroll("left")}catch(b){return}e()},5)))}(),bszCaller={fetch:function(a,b){var c="BusuanziCallback_"+Math.floor(1099511627776*Math.random());window[c]=this.evalCall(b),a=a.replace("=BusuanziCallback","="+c),scriptTag=document.createElement("SCRIPT"),scriptTag.type="text/javascript",scriptTag.defer=!0,scriptTag.src=a,document.getElementsByTagName("HEAD")[0].appendChild(scriptTag)},evalCall:function(a){return function(b){ready(function(){try{a(b),scriptTag.parentElement.removeChild(scriptTag)}catch(c){bszTag.hides()}})}}},bszCaller.fetch("//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback",function(a){bszTag.texts(a),bszTag.shows()}),bszTag={bszs:["site_pv","page_pv","site_uv"],texts:function(a){this.bszs.map(function(b){var c=document.getElementById("busuanzi_value_"+b);c&&(c.innerHTML=a[b])})},hides:function(){this.bszs.map(function(a){var b=document.getElementById("busuanzi_container_"+a);b&&(b.style.display="none")})},shows:function(){this.bszs.map(function(a){var b=document.getElementById("busuanzi_container_"+a);b&&(b.style.display="inline")})}};
+const bszCaller = {
+  // Faz uma chamada para uma URL especificada e chama uma função de retorno com os dados retornados
+  fetch(url, callback) {
+    const callbackName = `BusuanziCallback_${Math.floor(Math.random() * 1099511627776)}`;
+    window[callbackName] = this.evalCall(callback);
+    url = url.replace('=BusuanziCallback', `=${callbackName}`);
+
+    const scriptTag = document.createElement('SCRIPT');
+    scriptTag.type = 'text/javascript';
+    scriptTag.defer = true;
+    scriptTag.src = url;
+    document.getElementsByTagName('HEAD')[0].appendChild(scriptTag);
+  },
+  // Retorna uma função que avalia o retorno da chamada de URL
+  evalCall(callback) {
+    return data => {
+      ready(() => {
+        try {
+          callback(data);
+          scriptTag.parentElement.removeChild(scriptTag);
+        } catch (error) {
+          bszTag.hides();
+        }
+      });
+    };
+  },
+};
+
+// Faz uma chamada para o URL especificado e atualiza o texto e a exibição dos elementos do bszTag
+bszCaller.fetch(
+  '//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback',
+  data => {
+    bszTag.texts(data);
+    bszTag.shows();
+  },
+);
+
+const bszTag = {
+  bszs: ['site_pv', 'page_pv', 'site_uv'],
+  // Atualiza o texto de cada elemento do bszTag com os dados fornecidos
+  texts(data) {
+    this.bszs.forEach(bsz => {
+      const element = document.getElementById(`busuanzi_value_${bsz}`);
+      if (element) {
+        element.innerHTML = data[bsz];
+      }
+    });
+  },
+  // Oculta cada elemento do bszTag
+  hides() {
+    this.bszs.forEach(bsz => {
+      const element = document.getElementById(`busuanzi_container_${bsz}`);
+      if (element) {
+        element.style.display = 'none';
+      }
+    });
+  },
+  // Exibe cada elemento do bszTag
+  shows() {
+    this.bszs.forEach(bsz => {
+      const element = document.getElementById(`busuanzi_container_${bsz}`);
+      if (element) {
+        element.style.display = 'inline';
+      }
+    });
+  },
+};
+
+// Executa uma função quando o documento estiver pronto
+
+function ready(fn) {
+  if (
+    document.readyState === 'interactive' ||
+    document.readyState === 'complete'
+  ) {
+    fn.call(document);
+  } else {
+    bszTag.push(() => fn.call(this));
+  }
+}
+
+// Executa todas as funções armazenadas em bszTag e limpa o array
+function d() {
+  bszTag.forEach(fn => fn.apply(document));
+  bszTag = [];
+}
+
+// Marcador de prontidão do documento e limpeza do intervalo
+function e() {
+  if (!a) {
+    a = true;
+    d.call(window);
+    if (document.removeEventListener) {
+      document.removeEventListener('DOMContentLoaded', e, false);
+    } else {
+      document.attachEvent &&
+        document.detachEvent('onreadystatechange', e) &&
+        (window == window.top && (clearInterval(c), (c = null)));
+    }
+  }
+}
+
+// Verifica se o documento está pronto e chama a função de marcador de prontidão do documento
+if (document.addEventListener) {
+  document.addEventListener('DOMContentLoaded', e, false);
+} else {
+  document.attachEvent &&
+    (document.attachEvent('onreadystatechange', function() {
+      /loaded|complete/.test(document.readyState) && e();
+    }),
+    window == window.top &&
+      (c = setInterval(function() {
+        try {
+          a || document.documentElement.doScroll('left');
+        } catch (b) {
+          return;
+        }
+        e();
+      }, 5)));
+}
